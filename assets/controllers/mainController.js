@@ -1,8 +1,8 @@
-var app = angular.module('App',[]);
+var app = angular.module('App', []);
 
-
-
-app.controller('MainController', ['$scope', function($scope){
-	$scope.title = "Hola mundo";
-
-}]);
+app.controller('MainController', [
+	'$scope',
+	function ($scope) {
+		$scope.title = 'Hola mundo';
+	},
+]);

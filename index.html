@@ -76,7 +76,16 @@
 				<!-- End Navbar -->
 				<div class="content">
 					<div class="container-fluid">
-						<ng-product></ng-product>
+						<div ng-controller="ProductController" ng-init="init()">
+							<ng-product
+								ng-repeat="product in allProducts"
+								img="{{product.img}}"
+								description="{{product.description}}"
+								name="{{product.name}}"
+								price="{{product.price}}"
+								id="{{product.id}}"
+							></ng-product>
+						</div>
 					</div>
 				</div>
 				<footer class="footer">
@@ -94,6 +103,8 @@
 		<script src="assets/js/core/bootstrap-material-design.min.js"></script>
 		<script type="text/javascript" src="assets/js/angular.min.js"></script>
 		<script type="text/javascript" src="assets/controllers/mainController.js"></script>
+		<script type="text/javascript" src="assets/controllers/productController.js"></script>
 		<script type="text/javascript" src="assets/directives/productsDirective.js"></script>
+		<script type="text/javascript" src="assets/services/productService.js"></script>
 	</body>
 </html>

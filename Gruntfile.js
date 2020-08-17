@@ -15,6 +15,7 @@ module.exports = function (grunt) {
 					'./assets/directives/*.js',
 					'./assets/controllers/*.js',
 					'./assets/js/*.js',
+					'./assets/data/*.json',
 					'./*.html',
 					'./assets/directives/partials/*.html',
 					'./assets/css/*.css',

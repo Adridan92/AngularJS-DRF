@@ -1,0 +1,23 @@
+[
+	{
+		"id": 1,
+		"name": "Pulsar Rs 200",
+		"description": "Pulsar de 200 cc, Marca Bajaj, Modelo 2020",
+		"price": 75000,
+		"img": "assets/img/pulsarRs200.jpg"
+	},
+	{
+		"id": 2,
+		"name": "Yamaha R3",
+		"description": "R3 300 cc, Marca Yamaha, Modelo 2021",
+		"price": 150000,
+		"img": "assets/img/yamahar3.jpg"
+	},
+	{
+		"id": 3,
+		"name": "CBR 250",
+		"description": "CBR de 250 cc, Marca Honda, Modelo 2020",
+		"price": 75000,
+		"img": "assets/img/cbr250.jpg"
+	}
+]
