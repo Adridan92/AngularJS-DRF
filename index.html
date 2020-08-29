@@ -14,6 +14,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
 		<!-- CSS Files -->
 		<link href="assets/css/material-dashboard.css?v=2.1.2" rel="stylesheet" />
+		<link href="assets/css/style.css" rel="stylesheet" />
 	</head>
 
 	<body class="" ng-controller="MainController">
@@ -52,7 +53,7 @@
 								<li class="nav-item dropdown">
 									<a
 										class="nav-link"
-										href="javascript:;"
+										hrefcart="javascript:;"
 										id="navbarDropdownProfile"
 										data-toggle="dropdown"
 										aria-haspopup="true"
@@ -64,10 +65,26 @@
 										</p>
 									</a>
 									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownProfile">
-										<a class="dropdown-item" href="#">Profile</a>
+										<a class="dropdown-item" href="#!/user">Profile</a>
 										<div class="dropdown-divider"></div>
 										<a class="dropdown-item" href="#">Log out</a>
 									</div>
+								</li>
+								<li>
+									<a
+										class="nav-link"
+										hrefcart="javascript:;"
+										id="navbarDropdownCart"
+										data-toggle="dropdown"
+										aria-haspopup="true"
+										aria-expanded="false"
+									>
+										<i class="material-icons">shopping_cart</i>
+									</a>
+									<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownCart">
+										<cart-items cart="shoppingCart"></cart-items>
+									</div>
+
 								</li>
 							</ul>
 						</div>
@@ -76,16 +93,7 @@
 				<!-- End Navbar -->
 				<div class="content">
 					<div class="container-fluid">
-						<div ng-controller="ProductController" ng-init="init()">
-							<ng-product
-								ng-repeat="product in allProducts"
-								img="{{product.img}}"
-								description="{{product.description}}"
-								name="{{product.name}}"
-								price="{{product.price}}"
-								id="{{product.id}}"
-							></ng-product>
-						</div>
+						<div ng-view></div>
 					</div>
 				</div>
 				<footer class="footer">
@@ -102,9 +110,34 @@
 		<script src="assets/js/core/popper.min.js"></script>
 		<script src="assets/js/core/bootstrap-material-design.min.js"></script>
 		<script type="text/javascript" src="assets/js/angular.min.js"></script>
+		<script type="text/javascript" src="assets/js/angular-route.min.js"></script>
+		<script type="text/javascript" src="assets/js/angular-cookies.min.js"></script>
+
 		<script type="text/javascript" src="assets/controllers/mainController.js"></script>
 		<script type="text/javascript" src="assets/controllers/productController.js"></script>
+
+		<script type="text/javascript" src="assets/directives/detailProductDirective.js"></script>
+		<script type="text/javascript" src="assets/controllers/detailProductController.js"></script>
+
 		<script type="text/javascript" src="assets/directives/productsDirective.js"></script>
 		<script type="text/javascript" src="assets/services/productService.js"></script>
+		<script type="text/javascript" src="assets/services/userService.js"></script>
+		<script type="text/javascript" src="assets/services/cartService.js"></script>
+
+		<!-- PRODUCT LIST MODULE -->
+		<script type="text/javascript" src="assets/app/product/product.module.js"></script>
+		<script type="text/javascript" src="assets/app/product/product-list.component.js"></script>
+		<script type="text/javascript" src="assets/app/product/product-detail.component.js"></script>
+
+		<!-- USER MODULE -->
+		<script type="text/javascript" src="assets/app/user/user.module.js"></script>
+		<script type="text/javascript" src="assets/app/user/user-info.component.js"></script>
+
+		<!-- CART MODULE -->
+		<script type="text/javascript" src="assets/app/cart/cart.module.js"></script>
+		<script type="text/javascript" src="assets/app/cart/cart.component.js"></script>
+
+
+
 	</body>
 </html>

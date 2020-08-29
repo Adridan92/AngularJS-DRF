@@ -16,5 +16,9 @@ app.controller('ProductController', [
 				$scope.allProducts = response.data;
 			});
 		};
+
+		$scope.addItem = function (id) {
+			alert(id);
+		};
 	},
 ]);

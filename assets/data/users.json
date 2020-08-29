@@ -1,0 +1,25 @@
+[
+{
+	"id":1,
+"name":"Anonimous",
+"direccion":"Calle Bosques",
+"age":24,
+"img":"assets/img/faces/hack.jpeg"
+},
+{
+	"id":2,
+"name":"Anonimous 1",
+"direccion":"Calle Cedros ",
+"age":23,
+"img":"assets/img/faces/skull.png"
+},
+{
+	"id":3,
+"name":"Anonimous 2",
+"direccion":"Calle Caobas",
+"age":25,
+"img":"assets/img/faces/thief.jpg"
+}
+
+
+]
