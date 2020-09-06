@@ -1,13 +1,17 @@
-var app = angular.module('App', ['ngRoute', 'product', 'user', 'cartModule']);
+var app = angular.module('App', ['ngRoute', 'product', 'user', 'cartModule','ngCookies']);
 
-app.controller('MainController', [
-	'$scope',
-	function ($scope) {
 
-		$scope.shoppingCart = [];
-		$scope.title = 'Hola mundo';
-	},
-]);
+
+app.controller('MainController', ['$scope','$cookies',function($scope,$cookies){
+	$scope.title="Hola mundo";
+
+	$scope.shoppingCart=[];
+
+	if (!angular.isUndefined($cookies.getObject('cart'))) {
+			 $scope.shoppingCart=$cookies.getObject("cart");
+	}
+
+}]);
 
 app.config([
 	'$routeProvider',

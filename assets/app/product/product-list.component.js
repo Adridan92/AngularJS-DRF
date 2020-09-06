@@ -19,9 +19,13 @@ angular.module('product').component('productList', {
 				});
 			};
 
-			ctrl.addItem = function (item) {
+			ctrl.addItem=function(item){
 				ctrl.cart.push(item);
+				var expireDate=new Date();
+				expireDate.setDate(expireDate.getDate() + 1);
+				$cookies.putObject('cart',ctrl.cart,{'expires':expireDate});
 				console.log(ctrl.cart);
+
 			};
 
 			ctrl.getProducts();
